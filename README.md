@@ -1,5 +1,5 @@
 # 🎧 Customer Service
-Project Customer Service is a project that me and my friends create with the purpose of learning and how to make an optimize Customer Service Application
+Project Customer Service is a project that me and my friends create with the purpose of learning and how to make an optimize Customer Service Application. This project is designed to enhance customer support efficiency. This system includes features such as ticket management, live chat and calls. Built with a focus on scalability and user-friendly interfaces, our solution aims to streamline support operations and improve customer satisfaction.
 
 # Key Feature
 ## 🎫 Ticket System
