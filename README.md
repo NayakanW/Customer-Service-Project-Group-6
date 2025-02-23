@@ -43,3 +43,9 @@ For now :
     Employee → Departement
     
 ![ERD Image](https://github.com/NayakanW/Customer-Service/blob/main/ERD%20CS.png?raw=true)
+
+
+# Reference  
+- [osTicket](https://osticket.com/) - An Open Source Supporting Ticket Software  
+- [Open Support](https://github.com/opensupportapp/opensupport) - Simple Open Source Ticket System, made with React and Ruby  
+- [Jira Service Management](https://www.atlassian.com/software/jira/service-management) - Automation for ticketing software  
