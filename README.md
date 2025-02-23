@@ -23,10 +23,10 @@ User can chat Customer Service if they don't want to make a call
 
 https://www.figma.com/design/VKJSIXUnaQw4XzC1S3JnIJ/Mockup-Customer-Service---6?node-id=1-7611&t=S7xeOmVqRJ63iTen-1
 
-#ERD
+# ERD
 This is are database design, subject to change to follow user needs
 For now :
-One-to-Many (1:M) Relationships:
+### One-to-Many (1:M) Relationships:
 
     User → Ticket
     Employee → Ticket
@@ -34,7 +34,7 @@ One-to-Many (1:M) Relationships:
     Messages → File
     Departement → Employee
 
-Many-to-One (M:1) Relationships:
+### Many-to-One (M:1) Relationships:
 
     Ticket → User
     Ticket → Employee
