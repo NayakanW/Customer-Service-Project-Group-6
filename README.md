@@ -16,7 +16,7 @@ User can chat Customer Service if they don't want to make a call
 
 # Mockup and link
 ### User
-![Customer_Service_Mockup_Main_Page](https://github.com/user-attachments/assets/c0326c5a-3d28-411e-8afd-7194b33e4295)
+![Customer_Service_Mockup_Main_Page](https://github.com/user-attachments/assets/474af880-5017-41b3-b000-679ca65a0ad1)
 
 ### Staff
 ![Customer_Service_Mockup_Main_Page_Staff](https://github.com/user-attachments/assets/bffd9874-5c05-4d4a-8e6b-2556216715a8)
