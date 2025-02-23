@@ -10,3 +10,6 @@ a feature created for those who work as Customer Service so they can decide weth
 
 ## 📞 Call from Staff
 the staff can also call user, and the user will receive a pop up if they want to accept the call or not
+
+## 📱 Chat
+User can chat Customer Service if they don't want to make a call
