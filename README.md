@@ -17,3 +17,24 @@ User can chat Customer Service if they don't want to make a call
 # Mockup and link
 ![Customer_Service_Mockup_Main_Page](https://github.com/user-attachments/assets/c0326c5a-3d28-411e-8afd-7194b33e4295)
 https://www.figma.com/design/VKJSIXUnaQw4XzC1S3JnIJ/Mockup-Customer-Service---6?node-id=1-7611&t=S7xeOmVqRJ63iTen-1
+
+#ERD
+This is are database design, subject to change to follow user needs
+For now :
+One-to-Many (1:M) Relationships:
+
+    User → Ticket
+    Employee → Ticket
+    Ticket → Messages
+    Messages → File
+    Departement → Employee
+
+Many-to-One (M:1) Relationships:
+
+    Ticket → User
+    Ticket → Employee
+    Messages → Ticket
+    File → Messages
+    Employee → Departement
+![ERD Image](https://github.com/NayakanW/Customer-Service/blob/main/ERD%20CS.png?raw=true)
+
