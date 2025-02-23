@@ -1,18 +1,18 @@
 # 🎧 Customer Service
-Project Customer Service is a project that me and my friends create with the purpose of learning and how to make an optimize Customer Service Application. This project is designed to enhance customer support efficiency. This system includes features such as ticket management, live chat and calls. Built with a focus on scalability and user-friendly interfaces, our solution aims to streamline support operations and improve customer satisfaction.
+Project Customer Service adalah project yang dibuat dengan tujuan untuk belajar dan mengembangkan aplikasi Customer Service yang optimal. Project ini dirancang untuk meningkatkan efisiensi layanan pelanggan. Sistem ini mencakup fitur seperti manajemen sistem tiket, live chat, dan panggilan. Sistem ini dibuat dengan fokus pada skalabilitas dan antarmuka yang ramah pengguna, solusi kami adalah bertujuan untuk menyederhanakan operasional layanan dukungan dan meningkatkan kepuasan pelanggan.
 
-# Key Feature
-## 🎫 Ticket System
-a ticket system that makes it easier for user if their request has been process and in progress, also they have the option to close the ticket. The ticket system also make it easier for staff to organize, manage priority, also assigned it to other staff, and the ticket they see is depend on what department they are in
+# Fitur Utama
+## 🎫 Sistem Tiket
+Sistem tiket yang memudahkan pengguna dalam melacak status permintaan mereka, baik yang sedang diproses maupun yang masih dalam progres. Pengguna juga memiliki opsi untuk menutup tiket jika permasalahan telah terselesaikan. Bagi staf, sistem ini membantu dalam mengatur tiket dengan lebih efisien, mengelola prioritas, serta menetapkannya kepada staf lain yang bertanggung jawab. Selain itu, tiket yang ditampilkan kepada staf disesuaikan dengan departemen tempat mereka bekerja, sehingga setiap permintaan dapat ditangani oleh tim yang paling relevan.
 
-## 📴 Active and Off Status
-a feature created for those who work as Customer Service so they can decide wether their status is active or not, when their active they can get a calls or a messages from user and when their off they will no longer receive calls or messages from user
+## 📴 Status Aktif dan Nonaktif
+Fitur ini dibuat untuk Customer Service agar mereka dapat menentukan status mereka, apakah sedang aktif atau tidak. Saat status aktif, mereka dapat menerima pesan dari pengguna. Namun, saat status nonaktif, mereka tidak akan menerima panggilan atau pesan dari pengguna.
 
-## 📞 Call from Staff
-the staff can also call user, and the user will receive a pop up if they want to accept the call or not
+## 📞 Panggilan dari Staf
+Staf juga dapat melakukan panggilan kepada pengguna. Pengguna akan menerima notifikasi pop-up yang memungkinkan mereka untuk menerima atau menolak panggilan tersebut.
 
 ## 📱 Chat
-User can chat Customer Service if they don't want to make a call
+Pengguna dapat menghubungi Customer Service melalui chat jika mereka tidak ingin melakukan panggilan.
 
 # Mockup and link
 ### User
@@ -45,7 +45,7 @@ For now :
 ![ERD Image](https://github.com/NayakanW/Customer-Service/blob/main/ERD%20CS.png?raw=true)
 
 
-# Reference  
+# Referensi Website
 - [osTicket](https://osticket.com/) - An Open Source Supporting Ticket Software  
 - [Open Support](https://github.com/opensupportapp/opensupport) - Simple Open Source Ticket System, made with React and Ruby  
 - [Jira Service Management](https://www.atlassian.com/software/jira/service-management) - Automation for ticketing software  
