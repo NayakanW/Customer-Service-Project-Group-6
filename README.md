@@ -1,4 +1,4 @@
-![Main_User](https://github.com/user-attachments/assets/3c0135ee-5b1a-4f45-b4c0-683769477423)# 🎧 Customer Service
+# 🎧 Customer Service
 Project Customer Service adalah project yang dibuat dengan tujuan untuk belajar dan mengembangkan aplikasi Customer Service yang optimal. Project ini dirancang untuk meningkatkan efisiensi layanan pelanggan. Sistem ini mencakup fitur seperti manajemen sistem tiket, live chat, dan panggilan. Sistem ini dibuat dengan fokus pada skalabilitas dan antarmuka yang ramah pengguna, solusi kami adalah bertujuan untuk menyederhanakan operasional layanan dukungan dan meningkatkan kepuasan pelanggan.
 
 # Fitur Utama
@@ -16,7 +16,7 @@ Pengguna dapat menghubungi Customer Service melalui chat jika mereka tidak ingin
 
 # Mockup and link
 ### User
-![Main_User](https://github.com/user-attachments/assets/cb256b06-5e38-4443-9b6f-a949c69407e3)
+![Main_User](https://github.com/user-attachments/assets/bf955bd8-9074-4971-903e-d6f5d80f6c3f)
 
 ### Staff
 ![Main_Staff](https://github.com/user-attachments/assets/d4549e14-ba9b-44eb-baff-1e8664f443fa)
