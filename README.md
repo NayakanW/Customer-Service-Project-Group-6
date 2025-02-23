@@ -14,5 +14,6 @@ the staff can also call user, and the user will receive a pop up if they want to
 ## 📱 Chat
 User can chat Customer Service if they don't want to make a call
 
-# Mockup Link
+# Mockup and link
+![Customer_Service_Mockup_Main_Page](https://github.com/user-attachments/assets/3aab98be-7c3b-4333-abad-228b0585330f)
 https://www.figma.com/design/VKJSIXUnaQw4XzC1S3JnIJ/Mockup-Customer-Service---6?node-id=1-7611&t=S7xeOmVqRJ63iTen-1
