@@ -179,14 +179,43 @@ router.post('/files', (req, res) => {
         res.status(201).send({ file_id: result.insertId, message_id, File_name, File_location });
     });
 });
+//Tampilkan Laporan Harian, mingguan dan bulanan
+router.get('/report', (req, res) => {
+    const sql = `
+        SELECT 
+            'Daily' AS ReportType,
+            DATE(DateReport) AS ReportDate,
+            SUM(TotalTicket) AS TotalTickets,
+            SUM(TicketClosed) AS TicketsClosed
+        FROM report
+        GROUP BY DATE(DateReport)
 
-// Buat report ke file
-router.post('/reports', (req, res) => {
-    const { ticket_id, report_text } = req.body;
-    const sql = `INSERT INTO report (ticket_id, report_text, created_at) VALUES (?, ?, NOW())`;
-    db.query(sql, [ticket_id, report_text], (err, result) => {
-        if (err) return res.status(500).send(err);
-        res.status(201).send({ report_id: result.insertId, ticket_id, report_text });
+        UNION ALL
+
+        SELECT 
+            'Weekly' AS ReportType,
+            CONCAT(YEAR(DateReport), '-W', WEEK(DateReport)) AS ReportDate,
+            SUM(TotalTicket) AS TotalTickets,
+            SUM(TicketClosed) AS TicketsClosed
+        FROM report
+        GROUP BY YEAR(DateReport), WEEK(DateReport)
+
+        UNION ALL
+
+        SELECT 
+            'Monthly' AS ReportType,
+            CONCAT(YEAR(DateReport), '-', LPAD(MONTH(DateReport), 2, '0')) AS ReportDate,
+            SUM(TotalTicket) AS TotalTickets,
+            SUM(TicketClosed) AS TicketsClosed
+        FROM report
+        GROUP BY YEAR(DateReport), MONTH(DateReport);
+    `;
+
+    db.query(sql, (err, results) => {
+        if (err) {
+            return res.status(500).json({ error: err.message });
+        }
+        res.status(200).json(results);
     });
 });
 
