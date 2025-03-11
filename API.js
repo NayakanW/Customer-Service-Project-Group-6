@@ -18,7 +18,7 @@ db.connect((err) => {
     console.log('Connected to MySQL');
 });
 
-// CREATE Ticket
+// Buat Ticket (Create)
 router.post('/tickets', (req, res) => {
     const { ticket_id, status, user_id, employee_id, Priority } = req.body;
     const sql = `INSERT INTO ticket (ticket_id, DateCreated, status, user_id, employee_id, Priority) VALUES (?, NOW(), ?, ?, ?, ?)`;
@@ -31,7 +31,7 @@ router.post('/tickets', (req, res) => {
     });
 });
 
-// READ all ticket
+// Lihat SEMUA ticket (Read)
 router.get('/tickets', (req, res) => {
     const sql = `SELECT * FROM ticket`;
     db.query(sql, (err, results) => {
@@ -42,7 +42,7 @@ router.get('/tickets', (req, res) => {
     });
 });
 
-// READ single ticket by ID (GET)
+// Cari Ticket By ID
 router.get('/tickets/:ticket_id', (req, res) => {
     const sql = `SELECT * FROM ticket WHERE ticket_id = ?`;
     db.query(sql, [req.params.ticket_id], (err, result) => {
@@ -56,7 +56,7 @@ router.get('/tickets/:ticket_id', (req, res) => {
     });
 });
 
-// update ticket when the employee process the ticket
+// Assign Employee Ke Ticket
 router.put('/tickets/:ticket_id', (req, res) => {
     const { status, employee_id } = req.body;
     const sql = `UPDATE ticket SET status = ?, employee_id = ? WHERE ticket_id = ?`;
@@ -72,7 +72,7 @@ router.put('/tickets/:ticket_id', (req, res) => {
     });
 });
 
-// DELETE ticket if supervisor decided to
+//Hapus ticket jika false alarm
 router.delete('/tickets/:ticket_id', (req, res) => {
     const sql = `DELETE FROM ticket WHERE ticket_id = ?`;
     db.query(sql, [req.params.ticket_id], (err, result) => {
@@ -84,6 +84,116 @@ router.delete('/tickets/:ticket_id', (req, res) => {
         }
         res.status(200).send({ message: 'Ticket deleted successfully' });
     });
+});
+
+// Ubah Prioritas Ticket
+router.put('/tickets/:id/priority', (req, res) => {
+    const { Priority } = req.body;
+    const sql = `UPDATE ticket SET Priority = ? WHERE ticket_id = ?`;
+    db.query(sql, [Priority, req.params.id], (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send({ message: 'Priority updated successfully' });
+    });
+});
+
+// Tutup ticket jika selesai
+router.put('/tickets/:id/close', (req, res) => {
+    const sql = `UPDATE ticket SET status = 'Closed' WHERE ticket_id = ?`;
+    db.query(sql, [req.params.id], (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send({ message: 'Ticket closed successfully' });
+    });
+});
+
+// Tampilkan semua pesan dari ticket tersebut
+router.get('/messages/:ticket_id', (req, res) => {
+    const sql = `SELECT * FROM messages WHERE ticket_id = ?`;
+    db.query(sql, [req.params.ticket_id], (err, results) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send(results);
+    });
+});
+
+// Tampilkan files2 yang diupload pada chat ticket
+router.get('/files/:ticket_id', (req, res) => {
+    const sql = `SELECT * FROM file WHERE ticket_id = ?`;
+    db.query(sql, [req.params.ticket_id], (err, results) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send(results);
+    });
+});
+
+// tampilkan report berdasarkan id ticket
+router.get('/reports/:ticket_id', (req, res) => {
+    const sql = `SELECT * FROM report WHERE ticket_id = ?`;
+    db.query(sql, [req.params.ticket_id], (err, results) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send(results);
+    });
+});
+
+// Cari ticket berdasarkan keyword prioritas atau status
+router.get('/tickets/search/:keyword', (req, res) => {
+    const keyword = `%${req.params.keyword}%`;
+    const sql = `SELECT * FROM ticket WHERE Priority LIKE ? OR status LIKE ?`;
+    db.query(sql, [keyword, keyword], (err, results) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send(results);
+    });
+});
+
+// cari ticket berdasarkan user
+router.get('/tickets/user/:user_id', (req, res) => {
+    const sql = `SELECT * FROM ticket WHERE user_id = ?`;
+    db.query(sql, [req.params.user_id], (err, results) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send(results);
+    });
+});
+
+// cari tiket yang di proses oleh employee
+router.get('/tickets/employee/:employee_id', (req, res) => {
+    const sql = `SELECT * FROM ticket WHERE employee_id = ?`;
+    db.query(sql, [req.params.employee_id], (err, results) => {
+        if (err) return res.status(500).send(err);
+        res.status(200).send(results);
+    });
+});
+
+// buat pesan
+router.post('/messages', (req, res) => {
+    const { ticket_id, Item, Message } = req.body;
+    const sql = `INSERT INTO messages (ticket_id, Item, Message) VALUES (?, ?, ?)`;
+    db.query(sql, [ticket_id, Item, Message], (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.status(201).send({ message_id: result.insertId, ticket_id, Item, Message });
+    });
+});
+
+// Menambahkan file ke pesan
+router.post('/files', (req, res) => {
+    const { message_id, File_name, File_location } = req.body;
+    const sql = `INSERT INTO file (message_id, File_name, File_location, created_at) VALUES (?, ?, ?, NOW())`;
+    db.query(sql, [message_id, File_name, File_location], (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.status(201).send({ file_id: result.insertId, message_id, File_name, File_location });
+    });
+});
+
+// Buat report ke file
+router.post('/reports', (req, res) => {
+    const { ticket_id, report_text } = req.body;
+    const sql = `INSERT INTO report (ticket_id, report_text, created_at) VALUES (?, ?, NOW())`;
+    db.query(sql, [ticket_id, report_text], (err, result) => {
+        if (err) return res.status(500).send(err);
+        res.status(201).send({ report_id: result.insertId, ticket_id, report_text });
+    });
+});
+
+app.use('/api', router);
+
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
 });
 
 module.exports = router;
