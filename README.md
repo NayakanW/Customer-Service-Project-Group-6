@@ -28,21 +28,30 @@ This is are database design, subject to change to follow user needs
 For now :
 ### One-to-Many (1:M) Relationships:
 
-    User → Ticket
-    Employee → Ticket
-    Ticket → Messages
-    Messages → File
-    Departement → Employee
+    Users → departments
+    tickets → users
+    tickets → departments
+    tickets → categories
+    comments → users
+    comments → tickets
+    attachments → users
+    attachments → tickets
+    notifications → users
+    activity_logs → users
+    activity_logs → tickets
+    ticket_histories → users
+    ticket_histories → tickets
+    ticket_escalations → tickets
+    ticket_escalations → departments
+    ticket_escalations → users
+    ticket_tags → tickets
+    ticket_tags → tags
 
 ### Many-to-One (M:1) Relationships:
 
-    Ticket → User
-    Ticket → Employee
-    Messages → Ticket
-    File → Messages
-    Employee → Departement
-    
-![ERD Image](https://github.com/NayakanW/Customer-Service/blob/main/ERD%20CS.png?raw=true)
+    vice versa of One-to-Many (1:M) Relationships
+
+![customer_service](https://github.com/user-attachments/assets/da7647b6-3569-4406-9f4b-42cd316f59e1)
 
 
 # Referensi Website
