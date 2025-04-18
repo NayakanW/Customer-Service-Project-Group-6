@@ -22,7 +22,7 @@
             </a>  
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('employee.report') }}">
               <img src="{{ asset('images/report.png') }}" alt="Report Icon" class="icon" style="width: 28px; height: 28px;">
               Report
             </a>
@@ -34,19 +34,19 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('employee.settings') }}">
               <img src="{{ asset('images/settings.png') }}" alt="Settings Icon" class="icon" style="width: 28px; height: 28px;">
               Settings
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('employee.help') }}">
               <img src="{{ asset('images/help.png') }}" alt="Help Icon" class="icon" style="width: 28px; height: 28px;">
               Help
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('employee.more') }}">
               <img src="{{ asset('images/more.png') }}" alt="More Icon" class="icon" style="width: 28px; height: 28px;">
               More
             </a>

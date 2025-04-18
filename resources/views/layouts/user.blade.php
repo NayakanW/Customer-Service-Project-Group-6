@@ -22,7 +22,7 @@
             </a>  
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('user.progress') }}">
               <img src="{{ asset('images/progress.png') }}" alt="Progress Icon" class="icon" style="width: 28px; height: 28px;">
               Progress
             </a>
@@ -34,19 +34,19 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('user.settings') }}">
               <img src="{{ asset('images/settings.png') }}" alt="Settings Icon" class="icon" style="width: 28px; height: 28px;">
               Settings
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('user.help') }}">
               <img src="{{ asset('images/help.png') }}" alt="Help Icon" class="icon" style="width: 28px; height: 28px;">
               Help
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('user.more') }}">
               <img src="{{ asset('images/more.png') }}" alt="More Icon" class="icon" style="width: 28px; height: 28px;">
               More
             </a>
