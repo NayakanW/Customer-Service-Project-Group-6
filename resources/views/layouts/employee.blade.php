@@ -9,7 +9,9 @@
 <body>
   <aside class="sidebar">
     <div class="logo">
-      <img src="{{ asset('images/logo.png') }}" alt="Logo" style="margin-bottom: 12px">
+      <a href="{{ route('employee.dashboard') }}">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" style="margin-bottom: 12px">
+      </a>
     </div>
     <nav>
         <ul>

@@ -9,14 +9,16 @@
 <body>
   <aside class="sidebar">
     <div class="logo">
-      <img src="{{ asset('images/logo.png') }}" alt="Logo" style="margin-bottom: 12px">
+      <a href="{{ route('user.dashboard') }}">
+        <img src="{{ asset('images/logo.png') }}" alt="Logo" style="margin-bottom: 12px">
+      </a>
     </div>
     <nav>
         <ul>
           <li>
             <a href="{{ route('user.profile') }}">
-                <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 24px; height: 24px;">
-                Profile
+              <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 24px; height: 24px;">
+              Profile
             </a>  
           </li>
           <li>
