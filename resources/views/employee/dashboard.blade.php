@@ -9,7 +9,7 @@
 <body>
   <aside class="sidebar">
     <div class="logo">
-      <img src="{{ asset('images/placeholder-logo.png') }}" alt="Logo">
+      <img src="{{ asset('images/placeholder-logo.png') }}" alt="Logo" style="margin-bottom: 12px">
     </div>
     <nav>
       <ul>
