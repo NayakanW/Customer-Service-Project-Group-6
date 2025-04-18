@@ -15,49 +15,49 @@
       <ul>
         <li>
           <a href="#">
-            <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 30px; height: 30px;">
+            <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 28px; height: 28px;">
             Profile
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('images/history.png') }}" alt="History Icon" class="icon" style="width: 30px; height: 30px;">
-            History
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="{{ asset('images/settings.png') }}" alt="Settings Icon" class="icon" style="width: 30px; height: 30px;">
-            Settings
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="{{ asset('images/help.png') }}" alt="Help Icon" class="icon" style="width: 30px; height: 30px;">
-            Help
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            <img src="{{ asset('images/report.png') }}" alt="Report Icon" class="icon" style="width: 30px; height: 30px;">
+            <img src="{{ asset('images/report.png') }}" alt="Report Icon" class="icon" style="width: 28px; height: 28px;">
             Report
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('images/more.png') }}" alt="More Icon" class="icon" style="width: 30px; height: 30px;">
+            <img src="{{ asset('images/history.png') }}" alt="History Icon" class="icon" style="width: 28px; height: 28px;">
+            History
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/settings.png') }}" alt="Settings Icon" class="icon" style="width: 28px; height: 28px;">
+            Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/help.png') }}" alt="Help Icon" class="icon" style="width: 28px; height: 28px;">
+            Help
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/more.png') }}" alt="More Icon" class="icon" style="width: 28px; height: 28px;">
             More
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('images/status.png') }}" alt="Status Icon" class="icon" style="width: 40px; height: 30px;">
+            <img src="{{ asset('images/status.png') }}" alt="Status Icon" class="icon" style="width: 36px; height: 28px;">
             Off/Active
           </a>
         </li>
         <li>
           <a href="#">
-            <img src="{{ asset('images/logout.png') }}" alt="Logout Icon" class="icon" style="width: 30px; height: 30px;">
+            <img src="{{ asset('images/logout.png') }}" alt="Logout Icon" class="icon" style="width: 28px; height: 28px; margin-right: 5px;">
             Log Out
           </a>
         </li>
