@@ -70,7 +70,7 @@
     </header>
     <section class="content">
       <div class="illustration">
-        <img src="{{ asset('images/employee-illustration.png') }}" alt="Illustration">
+        <img src="{{ asset('images/illustration.png') }}" alt="Illustration">
       </div>
       <div class="buttons">
         <button class="ticket-btn">🎟 Ticket</button>
