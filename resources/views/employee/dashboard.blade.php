@@ -1,6 +1,6 @@
 @extends('layouts.employee')
 
-@section('title', 'Dashboard Employee')
+@section('title', 'Employee Dashboard')
 
 @section('content')
   <div class="illustration">

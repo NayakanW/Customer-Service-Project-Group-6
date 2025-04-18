@@ -14,7 +14,7 @@
     <nav>
         <ul>
           <li>
-            <a href="{{ route('profile') }}">
+            <a href="{{ route('employee.profile') }}">
               <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 24px; height: 24px;">
               Profile
             </a>  
