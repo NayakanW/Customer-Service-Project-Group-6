@@ -28,7 +28,7 @@
             </a>
           </li>
           <li>
-            <a href="#">
+            <a href="{{ route('employee.history') }}">
               <img src="{{ asset('images/history.png') }}" alt="History Icon" class="icon" style="width: 28px; height: 28px;">
               History
             </a>
