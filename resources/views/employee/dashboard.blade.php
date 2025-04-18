@@ -13,16 +13,56 @@
     </div>
     <nav>
       <ul>
-        <li><a href="#"><span class="icon">⚪</span>Profile</a></li>
-        <li><a href="#"><span class="icon">⚪</span>History</a></li>
-        <li><a href="#"><span class="icon">⚪</span>Settings</a></li>
-        <li><a href="#"><span class="icon">⚪</span>Help</a></li>
-        <li><a href="#"><span class="icon">⚪</span>Report</a></li>
-        <li><a href="#"><span class="icon">⚪</span>More</a></li>
-        <li><a href="#"><span class="icon">⚪</span>Offline</a></li>
-        <li><a href="#"><span class="icon">⚪</span>Log Out</a></li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 30px; height: 30px;">
+            Profile
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/history.png') }}" alt="History Icon" class="icon" style="width: 30px; height: 30px;">
+            History
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/settings.png') }}" alt="Settings Icon" class="icon" style="width: 30px; height: 30px;">
+            Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/help.png') }}" alt="Help Icon" class="icon" style="width: 30px; height: 30px;">
+            Help
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/report.png') }}" alt="Report Icon" class="icon" style="width: 30px; height: 30px;">
+            Report
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/more.png') }}" alt="More Icon" class="icon" style="width: 30px; height: 30px;">
+            More
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/status.png') }}" alt="Status Icon" class="icon" style="width: 40px; height: 30px;">
+            Off/Active
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="{{ asset('images/logout.png') }}" alt="Logout Icon" class="icon" style="width: 30px; height: 30px;">
+            Log Out
+          </a>
+        </li>
       </ul>
-    </nav>
+    </nav>    
   </aside>
   <main>
     <header class="topbar">
