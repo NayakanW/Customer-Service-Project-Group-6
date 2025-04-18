@@ -1,5 +1,7 @@
 @extends('layouts.user')
 
+@section('header', 'Profile')
+
 @section('content')
   <div class="profile-container">
     <h2>Profil Pengguna</h2>

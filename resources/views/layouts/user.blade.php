@@ -61,7 +61,7 @@
 
   <main>
     <header class="topbar">
-      <h1>Customer Service</h1>
+        <h1>@yield('header', 'Customer Service')</h1>
     </header>
     
     <section class="content">

@@ -9,7 +9,7 @@
 <body>
   <aside class="sidebar">
     <div class="logo">
-      <img src="{{ asset('images/placeholder-logo.png') }}" alt="Logo" style="margin-bottom: 12px">
+      <img src="{{ asset('images/logo.png') }}" alt="Logo" style="margin-bottom: 12px">
     </div>
     <nav>
         <ul>
@@ -68,8 +68,7 @@
   <main>
     <header class="topbar">
         <h1>@yield('header', 'Customer Service')</h1>
-      </header>
-      
+    </header>
     
     <section class="content">
       @yield('content')
