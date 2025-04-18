@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard User</title>
+  <title>Profile</title>
   <link rel="stylesheet" href="{{ asset('css/user-styles.css') }}">
 </head>
 <body>
@@ -60,17 +60,9 @@
   </aside>
   <main>
     <header class="topbar">
-      <h1>Customer Service</h1>
+      <h1>Profile</h1>
     </header>
-    <section class="content">
-      <div class="illustration">
-        <img src="{{ asset('images/illustration.png') }}" alt="Illustration">
-      </div>
-      <div class="buttons">
-        <button class="ticket-btn">🎟 Ticket</button>
-        <button class="message-btn">✉ Message</button>
-      </div>
-    </section>
+    
   </main>
 </body>
 </html>

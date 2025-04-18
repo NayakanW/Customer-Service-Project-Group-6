@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee Dashboard</title>
+  <title>Dashboard Employee</title>
   <link rel="stylesheet" href="{{ asset('css/employee-styles.css') }}">
 </head>
 <body>
@@ -14,10 +14,10 @@
     <nav>
       <ul>
         <li>
-          <a href="#">
-            <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 28px; height: 28px;">
+          <a href="{{ route('profile') }}">
+            <img src="{{ asset('images/profile.png') }}" alt="Profile Icon" class="icon" style="width: 24px; height: 24px;">
             Profile
-          </a>
+          </a>  
         </li>
         <li>
           <a href="#">
