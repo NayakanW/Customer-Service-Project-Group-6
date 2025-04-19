@@ -1,0 +1,92 @@
+@import "Hurricane";
+
+table{
+  border-collapse: collapse;
+  .w100;
+  .text-left;
+}
+
+table tr{
+  height:@size3;
+}
+
+thead{
+  .bb;
+}
+
+table th{
+  color: @light-gray;
+  font-weight:100;
+  .text-left;
+}
+
+table .small{
+  width:@size5;
+}
+
+//======= VARIATIONS ======
+table.condensed tr{
+  height:@size2;
+  .p1;
+}
+
+table.condensed td{
+  .p1;
+}
+
+table.expanded tr{
+  height:@size5;
+}
+
+table.striped tr:nth-child(even){
+  background-color:@broken-white;
+}
+
+table.striped tr, table.striped td{
+  border-bottom: none;
+}
+
+table th{
+  padding-right: 20px;
+}
+table td{
+  padding-right: 20px;
+}
+
+table td:first-child, table th:first-child{
+  .pl4;
+}
+table td:last-child, table th:last-child{
+  .pr4;
+}
+
+
+table thead.sticky{
+  background: #fff;
+}
+
+table thead.sticky th{
+  position: -webkit-sticky;
+  position: sticky;
+  top: -4px;
+  z-index: 5;
+}
+
+table thead.sticky th.sticky:first-child {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: -4px;
+  z-index: 6;
+}
+
+table tbody td.sticky {
+  background: @broken-white;
+}
+
+table tbody th.sticky,td.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  z-index: 5;
+}
