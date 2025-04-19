@@ -25,31 +25,35 @@ This is are database design, subject to change to follow user needs
 For now :
 ### One-to-Many (1:M) Relationships:
 
-    Users → departments
-    tickets → users
-    tickets → departments
-    tickets → categories
-    comments → users
-    comments → tickets
-    attachments → users
-    attachments → tickets
-    notifications → users
-    activity_logs → users
-    activity_logs → tickets
-    ticket_histories → users
-    ticket_histories → tickets
-    ticket_escalations → tickets
-    ticket_escalations → departments
-    ticket_escalations → users
-    ticket_tags → tickets
-    ticket_tags → tags
+    Users → comments
+    Users → conversations
+    Users → leads
+    Users → leads_status_updates
+    Users → memberships
+    Users → tasks
+    Users → tickets
+    Users → ticket_events
+    Users → user_settings
+    teams → leads
+    teams → memberships
+    teams → tickets
+    ticket_types → tickets
+    conversations → messages
+    tickets → comments
+    tickets → ticket_events
+    leads → tasks
+    leads → lead_status_updates
+    settings → (optional to) teams
 
 ### Many-to-One (M:1) Relationships:
 
     vice versa of One-to-Many (1:M) Relationships
 
-![customer_service](https://github.com/user-attachments/assets/da7647b6-3569-4406-9f4b-42cd316f59e1)
+### Many-to-Many (N:M) Relationships:
 
+    users → memberships ← teams
+
+![customer_service6](https://github.com/user-attachments/assets/fb6b6f06-0aeb-46dc-983a-44b33105ec73)
 
 # Referensi Website
 - [osTicket](https://osticket.com/) - An Open Source Supporting Ticket Software  
