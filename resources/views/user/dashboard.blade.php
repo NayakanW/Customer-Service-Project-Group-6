@@ -7,7 +7,11 @@
     <img src="{{ asset('images/illustration.png') }}" alt="Illustration">
   </div>
   <div class="buttons">
-    <button class="ticket-btn">🎟 Ticket</button>
-    <button class="message-btn">✉ Message</button>
+    <a href="{{ route('user.ticket') }}" class="button-link">
+      <button class="ticket-btn">🎟 Ticket</button>
+    </a>
+    <a href="{{ route('user.message') }}" class="button-link">
+      <button class="message-btn">✉ Message</button>
+    </a>
   </div>
 @endsection

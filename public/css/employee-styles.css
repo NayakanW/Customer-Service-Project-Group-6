@@ -1,104 +1,132 @@
 /* General Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    display: flex;
-    height: 100vh;
-    background-color: #f9f9f9;
-  }
-  
-  /* Sidebar */
-  .sidebar {
-    width: 80px;
-    background-color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 1rem;
-    border-right: 1px solid #ddd;
-  }
-  
-  .sidebar .logo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-  }
-  
-  .sidebar nav ul {
-    list-style: none;
-    width: 100%;
-    text-align: center;
-    margin-top: 1rem;
-  }
-  
-  .sidebar nav li {
-    margin: 1rem 0;
-  }
-  
-  .sidebar nav a {
-    text-decoration: none;
-    color: #333;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 14px;
-  }
-  
-  /* Topbar */
-  .topbar {
-    width: 100%;
-    background-color: #b3a0ff;
-    text-align: center;
-    padding: 1rem;
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  /* Main Content */
-  main {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .illustration img {
-    width: 300px;
-    margin-bottom: 1rem;
-  }
-  
-  .buttons {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  button {
-    background-color: #7b6cf6;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  
-  button:hover {
-    background-color: #6a5ce3;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 80px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.sidebar nav li {
+  margin: 1rem 0;
+}
+
+.sidebar nav a {
+  text-decoration: none;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Topbar */
+.topbar {
+  width: 100%;
+  background-color: #b3a0ff;
+  text-align: center;
+  padding: 1rem;
+  color: #333;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration img {
+  width: 300px;
+  margin-bottom: 1rem;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+button {
+  background-color: #7b6cf6;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+button:hover {
+  background-color: #6a5ce3;
+}
+
+.button-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.button-link button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  background-color: #7b6cf6;
+  color: white;
+}
+
+.button-link button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #6a5ce3;
+}

@@ -7,8 +7,14 @@
     <img src="{{ asset('images/illustration.png') }}" alt="Illustration">
   </div>
   <div class="buttons">
-    <button class="ticket-btn">🎟 Ticket</button>
-    <button class="message-btn">✉ Message</button>
-    <button class="phone-btn">📞 Phone</button>
+    <a href="{{ route('employee.ticket') }}" class="button-link">
+      <button class="ticket-btn">🎟 Ticket</button>
+    </a>
+    <a href="{{ route('employee.message') }}" class="button-link">
+      <button class="message-btn">✉ Message</button>
+    </a>
+    <a href="{{ route('employee.phone') }}" class="button-link">
+      <button class="phone-btn">📞 Phone</button>
+    </a>
   </div>
 @endsection
