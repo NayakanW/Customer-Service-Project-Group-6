@@ -7,6 +7,7 @@
     </div>
 
     {{ Form::open(["url" => route("tickets.store")]) }}
+    @csrf
     <div class="comment description actions">
         <table class="maxw600 no-padding">
             <tr><td class="w20"><b> {{ __('ticket.requester') }}:</b></td></tr>

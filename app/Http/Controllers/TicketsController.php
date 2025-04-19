@@ -6,6 +6,7 @@ use App\Repositories\TicketsIndexQuery;
 use App\Repositories\TicketsRepository;
 use App\Ticket;
 use BadChoice\Thrust\Controllers\ThrustController;
+use Illuminate\Support\Facades\Auth;
 
 /**
  * Controller untuk mengelola tiket customer service
@@ -19,6 +20,11 @@ use BadChoice\Thrust\Controllers\ThrustController;
  */
 class TicketsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         return (new ThrustController)->index('tickets');
@@ -41,17 +47,21 @@ class TicketsController extends Controller
 
     public function create()
     {
+        $this->authorize('create', Ticket::class);
         return view('tickets.create');
     }
 
     public function store()
     {
+        $this->authorize('create', Ticket::class);
+        
         $this->validate(request(), [
             'requester' => 'required|array',
             'title'     => 'required|min:3',
             'body'      => 'required',
             'team_id'   => 'nullable|exists:teams,id',
         ]);
+        
         $ticket = Ticket::createAndNotify(request('requester'), request('title'), request('body'), request('tags'));
         $ticket->updateStatus(request('status'));
 
@@ -71,6 +81,8 @@ class TicketsController extends Controller
 
     public function update(Ticket $ticket)
     {
+        $this->authorize('update', $ticket);
+        
         $this->validate(request(), [
             'requester' => 'required|array',
             'priority'  => 'required|integer',

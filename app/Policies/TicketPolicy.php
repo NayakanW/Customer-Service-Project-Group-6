@@ -12,7 +12,7 @@ class TicketPolicy
 
     public function before($user, $ability)
     {
-        if ($user->admin && $ability != 'delete') {
+        if ($user->is_admin && $ability != 'delete') {
             return true;
         }
     }
@@ -32,9 +32,27 @@ class TicketPolicy
      */
     public function view(User $user, Ticket $ticket)
     {
-        return  $ticket->user_id == $user->id ||
-                $user->teamsTickets()->pluck('id')->contains($ticket->id) ||
-                ($user->assistant && $ticket->isEscalated());
+        // Admin dan assistant bisa melihat semua tiket
+        if ($user->is_admin || $user->is_assistant) {
+            return true;
+        }
+        
+        // User bisa melihat tiket yang dia buat
+        if ($ticket->user_id == $user->id) {
+            return true;
+        }
+        
+        // User bisa melihat tiket yang ditugaskan ke timnya
+        if ($user->teamsTickets()->pluck('id')->contains($ticket->id)) {
+            return true;
+        }
+        
+        // User bisa melihat tiket yang dia buat sebagai requester
+        if ($ticket->requester_id && $ticket->requester->email == $user->email) {
+            return true;
+        }
+        
+        return false;
     }
 
     /**
@@ -46,7 +64,7 @@ class TicketPolicy
      */
     public function create(User $user)
     {
-        //
+        return $user && !$user->is_assistant;
     }
 
     /**
@@ -59,6 +77,12 @@ class TicketPolicy
      */
     public function update(User $user, Ticket $ticket)
     {
+        // Admin dan assistant bisa mengupdate semua tiket
+        if ($user->is_admin || $user->is_assistant) {
+            return true;
+        }
+        
+        // User bisa mengupdate tiket yang dia buat
         return $ticket->user_id == $user->id;
     }
 
@@ -77,6 +101,7 @@ class TicketPolicy
 
     public function assignToTeam(User $user, Ticket $ticket)
     {
+        return $user->is_admin;
     }
 
     public function createIssue(User $user, Ticket $ticket)

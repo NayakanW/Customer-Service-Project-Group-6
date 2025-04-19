@@ -30,8 +30,8 @@ class UsersTableSeeder extends Seeder
             'name' => 'Admin User',
             'email' => 'admin@example.com',
             'password' => Hash::make('password'),
-            'admin' => true,
-            'assistant' => false,
+            'is_admin' => true,
+            'is_assistant' => false,
             'locale' => 'en'
         ]);
 
@@ -40,8 +40,8 @@ class UsersTableSeeder extends Seeder
             'name' => 'Assistant User',
             'email' => 'assistant@example.com',
             'password' => Hash::make('password'),
-            'admin' => false,
-            'assistant' => true,
+            'is_admin' => false,
+            'is_assistant' => true,
             'locale' => 'en'
         ]);
 
@@ -50,8 +50,8 @@ class UsersTableSeeder extends Seeder
             'name' => 'Regular User',
             'email' => 'user@example.com',
             'password' => Hash::make('password'),
-            'admin' => false,
-            'assistant' => false,
+            'is_admin' => false,
+            'is_assistant' => false,
             'locale' => 'en'
         ]);
     }
