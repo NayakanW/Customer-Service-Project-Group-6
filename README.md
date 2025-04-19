@@ -8,9 +8,6 @@ Sistem tiket yang memudahkan pengguna dalam melacak status permintaan mereka, ba
 ## 📴 Status Aktif dan Nonaktif
 Fitur ini dibuat untuk Customer Service agar mereka dapat menentukan status mereka, apakah sedang aktif atau tidak. Saat status aktif, mereka dapat menerima pesan dari pengguna. Namun, saat status nonaktif, mereka tidak akan menerima panggilan atau pesan dari pengguna.
 
-## 📞 Panggilan dari Staf
-Staf juga dapat melakukan panggilan kepada pengguna. Pengguna akan menerima notifikasi pop-up yang memungkinkan mereka untuk menerima atau menolak panggilan tersebut.
-
 ## 📱 Chat
 Pengguna dapat menghubungi Customer Service melalui chat jika mereka tidak ingin melakukan panggilan.
 
