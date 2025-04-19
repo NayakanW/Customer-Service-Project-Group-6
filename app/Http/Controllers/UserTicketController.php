@@ -10,4 +10,9 @@ class UserTicketController extends Controller
     {
         return view('user.ticket');
     }
+    
+    public function create()
+    {
+        return view('user.ticket.create');
+    }
 }

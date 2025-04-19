@@ -29,14 +29,20 @@ Route::get('/user', function () {
 })->name('user.dashboard');
 
 // Untuk User
-Route::get('/user/profile', [UserProfileController::class, 'index'])->name('user.profile');
-Route::get('/user/history', [UserHistoryController::class, 'index'])->name('user.history');
-Route::get('/user/settings', [UserSettingsController::class, 'index'])->name('user.settings');
-Route::get('/user/help', [UserHelpController::class, 'index'])->name('user.help');
-Route::get('/user/more', [UserMoreController::class, 'index'])->name('user.more');
-Route::get('/user/progress', [UserProgressController::class, 'index'])->name('user.progress');
-Route::get('/user/ticket', [UserTicketController::class, 'index'])->name('user.ticket');
-Route::get('/user/message', [UserMessageController::class, 'index'])->name('user.message');
+Route::prefix('user')->name('user.')->group(function () {
+    Route::get('/profile', [UserProfileController::class, 'index'])->name('profile');
+    Route::get('/history', [UserHistoryController::class, 'index'])->name('history');
+    Route::get('/settings', [UserSettingsController::class, 'index'])->name('settings');
+    Route::get('/help', [UserHelpController::class, 'index'])->name('help');
+    Route::get('/more', [UserMoreController::class, 'index'])->name('more');
+    Route::get('/progress', [UserProgressController::class, 'index'])->name('progress');
+    Route::get('/message', [UserMessageController::class, 'index'])->name('message');
+    
+    // Ticket Routes
+    Route::get('/ticket', [UserTicketController::class, 'index'])->name('ticket');
+    Route::get('/ticket/create', [UserTicketController::class, 'create'])->name('ticket.create');
+    Route::post('/ticket', [UserTicketController::class, 'store'])->name('ticket.store');
+});
 
 // Untuk Employee
 Route::get('/employee/profile', [EmployeeProfileController::class, 'index'])->name('employee.profile');
